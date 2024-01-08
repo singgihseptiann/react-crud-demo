@@ -5,9 +5,8 @@
     { "src": "src/package.json", "use": "@now/static-build" },
     { "src": "server.js", "use": "@now/node" }
   ],
-  "routes": [
-    { "src": "/api/(.*)", "dest": "server.js/$1" },
-    { "src": "/(.*)", "dest": "src/$1" }
-  ],
-  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/server.js/$1" },
+    { "source": "/(.*)", "destination": "/src/$1" }
+  ]
 }
