@@ -3,7 +3,7 @@
   "builds": [
     { "src": "public/**/*", "use": "@now/static" },
     { "src": "src/package.json", "use": "@now/static-build" },
-    { "src": "server.js", "use": "@now/node" }
+    { "src": "server.js", "use": "@vercel/node" }
   ],
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/server.js/$1" },
